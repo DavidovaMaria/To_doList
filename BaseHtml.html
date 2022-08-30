@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id = "header">
+    <button id="callWindow" class = "openOkno" onclick="openW()">Добавить</button>
+    </div>
+    
+    <div id = "page_body" class = "openOkno">
+        <div id = "list_filter">
+            <input type="checkbox" id = "P_Done"  value="Done">
+            <label for="P_Done">Сделать</label>
+                  
+            <input type="checkbox" id = "P_Plan"  value="Plan">
+            <label for="P_Plan">Запланировать</label>
+            <br/>
+            
+            <input type="checkbox" id = "P_Manage"  value="Manage">
+            <label for="P_Manage">Делегировать</label>
+           
+            <input type="checkbox" id = "P_Delete"  value="Delete">
+            <label for="P_Delete">Исключить</label>
+            <br/>
+            <button id = "Bt_Filter" onclick = "Filtr_Items()"> Фильтр</button>
+        </div>
+        <ul id="main_list" class="openOkno"></ul>
+    </div>
+
+        <div id="okno" class = "closeOkno">
+            <div id="WHead">
+                <button id="WBClose" onclick="closeW()"> &times;</button>
+            </div>
+            <div id="WMain" class="WDiv">
+                <form>
+                    <p class="WP">Введите значение нового элемента</p>
+                    <p> <input id="newEl" placeholder ="Добавить задачу"/></p><br/><br/>
+                    
+                    <p class="WP" margin-top="100px" id ="WForm">Выберите степень важности задачи</p>
+                    <!-- <div class="WDiv" id="WForm"> -->
+                      <input type="radio" id = "Done" name="Form" value="Done" checked>
+                      <label for="Done">Сделать</label>
+                  
+                      <input type="radio" id = "Plan" name="Form" value="Plan">
+                      <label for="Plan">Запланировать</label>
+                      <!-- #580029 -->
+                        <br/>
+                      <input type="radio" id = "Manage" name="Form" value="Manage">
+                      <label for="Manage">Делегировать</label>
+                      <!-- #616800 -->
+                      
+                      <input type="radio" id = "Delete" name="Form" value="Delete">
+                      <label for="Delete">Исключить</label>
+                      <!-- #3A6100 -->
+                    <!-- </div> -->
+                </form>
+            </div>
+            <div id="WEnd" class="WDiv">
+                <button id="WButton" onclick="NewEl()"> Добавить </button>
+            </div>
+        </div>
+
+   
+</body>
+<link rel="stylesheet" href="C:/VS_projects/ProjectList/CSSList.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="C://VS_projects/ProjectlIst/ListScript.js"></script>
+</html>
